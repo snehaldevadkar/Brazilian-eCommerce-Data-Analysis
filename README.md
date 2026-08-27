@@ -1,43 +1,107 @@
-# Brazilian E-Commerce Data Analysis
+# 🇧🇷 Brazilian E-Commerce Data Analysis
 
-## Project Overview
+> **Exploratory Data Analysis of Brazilian e-commerce performance, customer behavior, payments, delivery, and satisfaction.**
 
-This project performs an Exploratory Data Analysis (EDA) of Brazilian e-commerce data to understand sales performance, customer distribution, product categories, payment behavior, delivery performance, customer satisfaction, and order cancellations.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge\&logo=pandas\&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge\&logo=numpy\&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge\&logo=python\&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge\&logo=jupyter\&logoColor=white)
 
-The analysis focuses on identifying meaningful business patterns and insights from the available e-commerce data.
+---
 
-## Objectives
+## 📌 Project Overview
 
-- Analyze overall sales and order performance
-- Understand customer distribution across Brazilian states
-- Identify high-revenue product categories
-- Analyze payment methods and installment behavior
-- Examine delivery performance
-- Investigate the relationship between delivery time and customer review scores
-- Analyze order cancellations and their geographic distribution
+This project explores the **Brazilian Olist e-commerce dataset** to uncover patterns in sales, customers, products, payments, delivery performance, customer satisfaction, and order cancellations.
 
-## Tools & Technologies
+The analysis focuses on turning raw transactional data into **business-relevant insights** that can help understand:
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Jupyter Notebook
+* 📈 Sales and revenue performance
+* 🌎 Customer distribution across Brazil
+* 🛍️ Product category performance
+* 💳 Payment methods and installment behavior
+* 🚚 Delivery efficiency
+* ⭐ Customer satisfaction
+* ❌ Order cancellations
 
-## Key Insights
+---
 
-- The dataset contains 99,441 orders.
-- The overall cancellation rate is approximately 0.63%.
-- São Paulo (SP) has the highest number of customers and generates the highest total revenue.
-- Beauty and personal care (`beleza_saude`) is the highest-revenue product category among the analyzed categories.
-- Credit cards are the dominant payment method.
-- The business shows a strong preference for single-payment transactions, while credit-card users account for most installment activity.
-- Monthly orders and revenue generally increased over the observed period, with strong performance around late 2017 and early 2018.
-- Delivery time is negatively correlated with review score, with a correlation of approximately -0.33.
-- Customers giving 5-star reviews received their orders in approximately 10.2 days on average, compared with approximately 20.8 days for 1-star reviews.
-- Cancelled orders are concentrated in larger customer markets, particularly SP, RJ, and MG.
+## 🎯 Business Questions
 
-## Visualizations
+The analysis was designed around the following questions:
+
+1. How do orders and revenue change over time?
+2. Which Brazilian states generate the most revenue?
+3. Which product categories contribute the most revenue?
+4. What payment methods do customers prefer?
+5. How does installment behavior vary by payment type?
+6. Does delivery time affect customer satisfaction?
+7. Which states have the highest number of cancelled orders?
+
+---
+
+## 📊 Dataset at a Glance
+
+| Metric                            |                     Result |
+| --------------------------------- | -------------------------: |
+| 🛒 Total Orders                   |                 **99,441** |
+| ❌ Cancellation Rate               |                 **~0.63%** |
+| 🏆 Top Revenue State              |         **São Paulo (SP)** |
+| 🥇 Top Revenue Category           | **Beauty & Personal Care** |
+| 💳 Dominant Payment Method        |            **Credit Card** |
+| 🚚 Delivery vs Review Correlation |                **~ -0.33** |
+
+---
+
+## 🔎 Key Insights
+
+### 🛒 Sales Performance
+
+* The dataset contains **99,441 orders**.
+* Monthly orders and revenue generally increased throughout the observed period.
+* Strong performance was observed around **late 2017 and early 2018**.
+
+### 🌎 Geographic Performance
+
+* **São Paulo (SP)** has the largest customer base and generates the highest total revenue.
+* Other major markets include **Rio de Janeiro (RJ)** and **Minas Gerais (MG)**.
+* Revenue is strongly concentrated in states with larger customer populations.
+
+### 🛍️ Product Performance
+
+* **Beauty & Personal Care (`beleza_saude`)** is the highest-revenue product category among the analyzed categories.
+* Product-category analysis helps identify which segments contribute most to overall revenue.
+
+### 💳 Payment Behavior
+
+* **Credit cards** are the dominant payment method.
+* Single-payment transactions represent a significant share of purchases.
+* Credit-card users account for most installment activity.
+
+### 🚚 Delivery & Customer Satisfaction
+
+One of the strongest findings from the analysis is the relationship between delivery time and customer satisfaction.
+
+**Delivery time and review score show a negative correlation of approximately -0.33.**
+
+| Review Score | Average Delivery Time |
+| -----------: | --------------------: |
+|          ⭐ 5 |        **~10.2 days** |
+|          ⭐ 1 |        **~20.8 days** |
+
+This suggests that **longer delivery times are associated with lower customer review scores**.
+
+> ⚠️ **Important:** Correlation does not prove that delivery time alone causes lower ratings. Other factors may also influence customer satisfaction.
+
+### ❌ Order Cancellations
+
+* The overall cancellation rate is approximately **0.63%**.
+* Cancelled orders are concentrated in larger customer markets.
+* **SP, RJ, and MG** account for a significant share of cancelled orders.
+
+---
+
+# 📈 Visualizations
 
 ### Monthly Revenue Trend
 
@@ -59,35 +123,112 @@ The analysis focuses on identifying meaningful business patterns and insights fr
 
 ![Average Delivery Time by Review Score](average_delivery_time_review_score.png)
 
-## Project Structure
+---
 
-| File | Description |
-|---|---|
-| `Olist_EDA.ipynb` | Main EDA notebook |
-| `Data/` | Dataset files used for the analysis |
-| `monthly_order_trend.png` | Monthly order trend |
-| `monthly_revenue_trend.png` | Monthly revenue trend |
-| `top_10_product_categories_revenue.png` | Top product categories by revenue |
-| `top_10_states_customers.png` | Top states by customer count |
-| `top_10_states_revenue.png` | Top states by revenue |
-| `top_states_avg_revenue.png` | Average revenue by state |
-| `top_states_avg_revenue_500_customers.png` | Average revenue for states with 500+ customers |
-| `revenue_by_payment_type.png` | Revenue by payment type |
-| `average_installments_payment_type.png` | Average installments by payment type |
-| `average_payment_value_installments.png` | Average payment value by installments |
-| `lowest_rated_product_categories.png` | Lowest-rated product categories |
-| `average_delivery_time_review_score.png` | Delivery time by review score |
-| `cancelled_orders_by_state.png` | Cancelled orders by state |
-| `README.md` | Project documentation |
+## 🧰 Tools & Technologies
 
-## Conclusion
+| Tool                    | Purpose                      |
+| ----------------------- | ---------------------------- |
+| 🐍 **Python**           | Data analysis                |
+| 🐼 **Pandas**           | Data manipulation & analysis |
+| 🔢 **NumPy**            | Numerical operations         |
+| 📊 **Matplotlib**       | Data visualization           |
+| 📓 **Jupyter Notebook** | Analysis environment         |
 
-The analysis provides an overview of sales performance, customer distribution, product categories, payment behavior, delivery performance, and customer satisfaction in Brazilian e-commerce data.
+---
 
-One of the key findings is the relationship between delivery time and customer satisfaction. Lower review scores are associated with longer delivery times, suggesting that improving delivery performance could potentially contribute to better customer satisfaction.
+## 📂 Project Structure
 
-Overall, the analysis highlights the importance of monitoring revenue trends, regional performance, payment behavior, cancellations, and delivery efficiency when making e-commerce business decisions.
+```text
+Brazilian-E-Commerce-Data-Analysis/
+│
+├── 📁 Data/
+│   └── Dataset files
+│
+├── 📓 Olist_EDA.ipynb
+│
+├── 📊 monthly_order_trend.png
+├── 📈 monthly_revenue_trend.png
+├── 🛍️ top_10_product_categories_revenue.png
+├── 🌎 top_10_states_customers.png
+├── 💰 top_10_states_revenue.png
+├── 📊 top_states_avg_revenue.png
+├── 📊 top_states_avg_revenue_500_customers.png
+├── 💳 revenue_by_payment_type.png
+├── 💳 average_installments_payment_type.png
+├── 💰 average_payment_value_installments.png
+├── ⭐ lowest_rated_product_categories.png
+├── 🚚 average_delivery_time_review_score.png
+├── ❌ cancelled_orders_by_state.png
+│
+└── 📄 README.md
+```
 
-## Author
+---
 
-**Snehal Devadkar**
+## 💡 Business Takeaways
+
+The analysis highlights several areas that could matter from a business perspective:
+
+### 1. 🚚 Improve Delivery Performance
+
+The negative relationship between delivery time and review scores suggests that improving delivery efficiency could potentially improve customer satisfaction.
+
+### 2. 🌎 Focus on High-Value Markets
+
+São Paulo and other major states represent important revenue markets and deserve continued attention from sales and logistics teams.
+
+### 3. 💳 Optimize Payment Experience
+
+Credit cards dominate customer payments, making the payment experience and installment options important areas for optimization.
+
+### 4. 🛍️ Monitor High-Revenue Categories
+
+High-performing categories such as Beauty & Personal Care can be analyzed further for pricing, inventory, marketing, and customer retention opportunities.
+
+### 5. ❌ Monitor Cancellation Patterns
+
+Although the cancellation rate is relatively low, geographic concentration can help identify markets where operational issues may require additional investigation.
+
+---
+
+## 🧠 What I Learned
+
+Through this project, I practiced:
+
+* Data cleaning and preprocessing
+* Exploratory data analysis
+* Aggregation and grouping with Pandas
+* Time-series analysis
+* Geographic analysis
+* Payment behavior analysis
+* Correlation analysis
+* Data visualization
+* Extracting business insights from raw data
+* Communicating analytical findings through a GitHub project
+
+---
+
+## 🏁 Conclusion
+
+This project demonstrates how exploratory data analysis can be used to understand **e-commerce performance beyond basic sales numbers**.
+
+The analysis identified important patterns across revenue, geography, product categories, payment behavior, delivery performance, customer satisfaction, and cancellations.
+
+The most notable finding is the relationship between **delivery time and customer review scores**, where longer delivery times are associated with lower ratings.
+
+Overall, the project shows how data can be transformed into **clear business insights that support better decisions around sales, logistics, customer experience, and market performance.**
+
+---
+
+## 👤 Author
+
+### **Snehal Devadkar**
+
+**Aspiring Data Analyst | Python | SQL | Power BI | Excel**
+
+📌 This project is part of my **Data Analytics portfolio** and demonstrates my ability to analyze real-world datasets and communicate business insights through data.
+
+---
+
+⭐ **If you found this project useful, feel free to explore the notebook and visualizations.**
