@@ -60,29 +60,25 @@ The analysis focuses on identifying meaningful business patterns and insights fr
 ![Average Delivery Time by Review Score](average_delivery_time_review_score.png)
 
 
-## Project Structure
+### Project Structure
 
-```text
-Brazilian-eCommerce-Data-Analysis/
-│
-├── Olist_EDA.ipynb
-│
-├── monthly_order_trend.png
-├── monthly_revenue_trend.png
-├── top_10_product_categories_revenue.png
-├── top_10_states_customers.png
-├── top_10_states_revenue.png
-├── top_states_avg_revenue.png
-├── top_states_avg_revenue_500_customers.png
-├── revenue_by_payment_type.png
-├── average_installments_payment_type.png
-├── average_payment_value_installments.png
-├── lowest_rated_product_categories.png
-├── average_delivery_time_review_score.png
-├── cancelled_orders_by_state.png
-│
-└── README.md
-```text
+| File | Description |
+|---|---|
+| `Olist_EDA.ipynb` | Main EDA notebook |
+| `monthly_order_trend.png` | Monthly order trend |
+| `monthly_revenue_trend.png` | Monthly revenue trend |
+| `top_10_product_categories_revenue.png` | Top product categories by revenue |
+| `top_10_states_customers.png` | Top states by customer count |
+| `top_10_states_revenue.png` | Top states by revenue |
+| `top_states_avg_revenue.png` | Average revenue by state |
+| `top_states_avg_revenue_500_customers.png` | Average revenue for states with 500+ customers |
+| `revenue_by_payment_type.png` | Revenue by payment type |
+| `average_installments_payment_type.png` | Average installments by payment type |
+| `average_payment_value_installments.png` | Average payment value by installments |
+| `lowest_rated_product_categories.png` | Lowest-rated product categories |
+| `average_delivery_time_review_score.png` | Delivery time by review score |
+| `cancelled_orders_by_state.png` | Cancelled orders by state |
+| `README.md` | Project documentation |
 
 ## Conclusion
 
