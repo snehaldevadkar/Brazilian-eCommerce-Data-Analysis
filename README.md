@@ -2,8 +2,8 @@
 
 ## Project Overview
 
-This project performs an Exploratory Data Analysis (EDA) of Brazilian e-commerce data to understand sales performance,
-customer distribution, product categories, payment behavior, delivery performance, customer satisfaction, and order cancellations.
+This project performs an Exploratory Data Analysis (EDA) of Brazilian e-commerce data to understand sales performance, customer distribution, product categories, payment behavior, delivery performance, customer satisfaction, and order cancellations.
+
 The analysis focuses on identifying meaningful business patterns and insights from the available e-commerce data.
 
 ## Objectives
@@ -36,7 +36,7 @@ The analysis focuses on identifying meaningful business patterns and insights fr
 - Delivery time is negatively correlated with review score, with a correlation of approximately -0.33.
 - Customers giving 5-star reviews received their orders in approximately 10.2 days on average, compared with approximately 20.8 days for 1-star reviews.
 - Cancelled orders are concentrated in larger customer markets, particularly SP, RJ, and MG.
- 
+
 ## Visualizations
 
 ### Monthly Revenue Trend
@@ -59,12 +59,12 @@ The analysis focuses on identifying meaningful business patterns and insights fr
 
 ![Average Delivery Time by Review Score](average_delivery_time_review_score.png)
 
-
-### Project Structure
+## Project Structure
 
 | File | Description |
 |---|---|
 | `Olist_EDA.ipynb` | Main EDA notebook |
+| `Data/` | Dataset files used for the analysis |
 | `monthly_order_trend.png` | Monthly order trend |
 | `monthly_revenue_trend.png` | Monthly revenue trend |
 | `top_10_product_categories_revenue.png` | Top product categories by revenue |
@@ -82,11 +82,11 @@ The analysis focuses on identifying meaningful business patterns and insights fr
 
 ## Conclusion
 
-The analysis provides an overview of sales performance, customer distribution, product categories, payment behavior, delivery performance, and
-customer satisfaction in Brazilian e-commerce data.One of the key findings is the relationship between delivery time and customer satisfaction.
-Lower review scores are associated with longer delivery times, suggesting that improving delivery performance could potentially contribute to better
-customer satisfaction.Overall, the analysis highlights the importance of monitoring revenue trends, regional performance, payment behavior, cancellations,
-and delivery efficiency when making e-commerce business decisions.
+The analysis provides an overview of sales performance, customer distribution, product categories, payment behavior, delivery performance, and customer satisfaction in Brazilian e-commerce data.
+
+One of the key findings is the relationship between delivery time and customer satisfaction. Lower review scores are associated with longer delivery times, suggesting that improving delivery performance could potentially contribute to better customer satisfaction.
+
+Overall, the analysis highlights the importance of monitoring revenue trends, regional performance, payment behavior, cancellations, and delivery efficiency when making e-commerce business decisions.
 
 ## Author
 
